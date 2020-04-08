@@ -1,15 +1,15 @@
 var wms_layers = [];
 
 
-        var lyr_YandexMap_0 = new ol.layer.Tile({
-            'title': 'Yandex Map',
+        var lyr_OSMStandard_0 = new ol.layer.Tile({
+            'title': 'OSM Standard',
             'type': 'base',
             'opacity': 1.000000,
             
             
             source: new ol.source.XYZ({
-    attributions: ' ',
-                url: 'http://vec01.maps.yandex.net/tiles?l=map&x={x}&y={y}&z={z}'
+    attributions: ' &middot; <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
+                url: 'http://tile.openstreetmap.org/{z}/{x}/{y}.png'
             })
         });
 var format_smolensk_soils_1 = new ol.format.GeoJSON();
@@ -115,26 +115,26 @@ var lyr_temp_orgs_6 = new ol.layer.Vector({
                 title: '<img src="styles/legend/temp_orgs_6.png" /> temp_orgs'
             });
 
-lyr_YandexMap_0.setVisible(true);lyr_smolensk_soils_1.setVisible(true);lyr_cover2_admin_M110_2.setVisible(true);lyr_smolensk_parcels_agr_3.setVisible(true);lyr_temp_torgi_4.setVisible(true);lyr_torgi_centroids_5.setVisible(true);lyr_temp_orgs_6.setVisible(true);
-var layersList = [lyr_YandexMap_0,lyr_smolensk_soils_1,lyr_cover2_admin_M110_2,lyr_smolensk_parcels_agr_3,lyr_temp_torgi_4,lyr_torgi_centroids_5,lyr_temp_orgs_6];
+lyr_OSMStandard_0.setVisible(true);lyr_smolensk_soils_1.setVisible(true);lyr_cover2_admin_M110_2.setVisible(true);lyr_smolensk_parcels_agr_3.setVisible(true);lyr_temp_torgi_4.setVisible(true);lyr_torgi_centroids_5.setVisible(true);lyr_temp_orgs_6.setVisible(true);
+var layersList = [lyr_OSMStandard_0,lyr_smolensk_soils_1,lyr_cover2_admin_M110_2,lyr_smolensk_parcels_agr_3,lyr_temp_torgi_4,lyr_torgi_centroids_5,lyr_temp_orgs_6];
 lyr_smolensk_soils_1.set('fieldAliases', {'POLIGON_ID': 'POLIGON_ID', 'SOIL0': 'SOIL0', 'SOIL1': 'SOIL1', 'SOIL2': 'SOIL2', 'SOIL3': 'SOIL3', 'PARENT1': 'PARENT1', 'PARENT2': 'PARENT2', });
 lyr_cover2_admin_M110_2.set('fieldAliases', {'COVER2_ID': 'COVER2_ID', 'REG_NAME': 'REG_NAME', 'OBL_NAME': 'OBL_NAME', 'NN': 'NN', 'NAME_NEW': 'NAME_NEW', 'NN_NEW': 'NN_NEW', 'FOKR': 'FOKR', });
 lyr_smolensk_parcels_agr_3.set('fieldAliases', {'field_1': 'field_1', 'CAD_N': 'CAD_N', 'STATUS': 'STATUS', 'C_COST': 'C_COST', 'AREA': 'AREA', 'UTL_ID': 'UTL_ID', 'UTL_DOC': 'UTL_DOC', });
-lyr_temp_torgi_4.set('fieldAliases', {'Кадастровый номер': 'Кадастровый номер', 'Кадастрвоая стоимость': 'Кадастрвоая стоимость', 'Площадь': 'Площадь', 'Статус аукциона': 'Статус аукциона', 'Тип сделки': 'Тип сделки', 'Цена сделки': 'Цена сделки', 'Победитель': 'Победитель', });
+lyr_temp_torgi_4.set('fieldAliases', {'Кадас': 'Кадас', 'Кадас_1': 'Кадас_1', 'Площа': 'Площа', 'Стату': 'Стату', 'Тип с�': 'Тип с�', 'Цена �': 'Цена �', 'Побед': 'Побед', });
 lyr_torgi_centroids_5.set('fieldAliases', {'fid': 'fid', 'Кадастровый номер': 'Кадастровый номер', 'Кадастрвоая стоимость': 'Кадастрвоая стоимость', 'Площадь': 'Площадь', 'Статус аукциона': 'Статус аукциона', 'Тип сделки': 'Тип сделки', 'Цена сделки': 'Цена сделки', 'Победитель': 'Победитель', });
-lyr_temp_orgs_6.set('fieldAliases', {'Наименование': 'Наименование', 'Основные средства': 'Основные средства', 'Чистая прибыль': 'Чистая прибыль', 'Рентабельность продаж': 'Рентабельность продаж', });
+lyr_temp_orgs_6.set('fieldAliases', {'Наиме': 'Наиме', 'Основ': 'Основ', 'Чиста': 'Чиста', 'Рента': 'Рента', });
 lyr_smolensk_soils_1.set('fieldImages', {'POLIGON_ID': 'TextEdit', 'SOIL0': 'TextEdit', 'SOIL1': 'TextEdit', 'SOIL2': 'TextEdit', 'SOIL3': 'TextEdit', 'PARENT1': 'TextEdit', 'PARENT2': 'TextEdit', });
 lyr_cover2_admin_M110_2.set('fieldImages', {'COVER2_ID': 'TextEdit', 'REG_NAME': 'TextEdit', 'OBL_NAME': 'TextEdit', 'NN': 'TextEdit', 'NAME_NEW': 'TextEdit', 'NN_NEW': 'TextEdit', 'FOKR': 'TextEdit', });
 lyr_smolensk_parcels_agr_3.set('fieldImages', {'field_1': 'Range', 'CAD_N': 'TextEdit', 'STATUS': 'Range', 'C_COST': 'TextEdit', 'AREA': 'TextEdit', 'UTL_ID': 'TextEdit', 'UTL_DOC': 'TextEdit', });
-lyr_temp_torgi_4.set('fieldImages', {'Кадастровый номер': '', 'Кадастрвоая стоимость': '', 'Площадь': '', 'Статус аукциона': '', 'Тип сделки': '', 'Цена сделки': '', 'Победитель': '', });
+lyr_temp_torgi_4.set('fieldImages', {'Кадас': '', 'Кадас_1': '', 'Площа': '', 'Стату': '', 'Тип с�': '', 'Цена �': '', 'Побед': '', });
 lyr_torgi_centroids_5.set('fieldImages', {'fid': 'TextEdit', 'Кадастровый номер': 'TextEdit', 'Кадастрвоая стоимость': 'TextEdit', 'Площадь': 'TextEdit', 'Статус аукциона': 'TextEdit', 'Тип сделки': 'TextEdit', 'Цена сделки': 'TextEdit', 'Победитель': 'TextEdit', });
-lyr_temp_orgs_6.set('fieldImages', {'Наименование': '', 'Основные средства': '', 'Чистая прибыль': '', 'Рентабельность продаж': '', });
+lyr_temp_orgs_6.set('fieldImages', {'Наиме': '', 'Основ': '', 'Чиста': '', 'Рента': '', });
 lyr_smolensk_soils_1.set('fieldLabels', {'POLIGON_ID': 'no label', 'SOIL0': 'no label', 'SOIL1': 'no label', 'SOIL2': 'no label', 'SOIL3': 'no label', 'PARENT1': 'no label', 'PARENT2': 'no label', });
 lyr_cover2_admin_M110_2.set('fieldLabels', {'COVER2_ID': 'no label', 'REG_NAME': 'no label', 'OBL_NAME': 'no label', 'NN': 'no label', 'NAME_NEW': 'no label', 'NN_NEW': 'no label', 'FOKR': 'no label', });
 lyr_smolensk_parcels_agr_3.set('fieldLabels', {'field_1': 'inline label', 'CAD_N': 'header label', 'STATUS': 'inline label', 'C_COST': 'inline label', 'AREA': 'inline label', 'UTL_ID': 'inline label', 'UTL_DOC': 'inline label', });
-lyr_temp_torgi_4.set('fieldLabels', {'Кадастровый номер': 'header label', 'Кадастрвоая стоимость': 'inline label', 'Площадь': 'inline label', 'Статус аукциона': 'inline label', 'Тип сделки': 'inline label', 'Цена сделки': 'inline label', 'Победитель': 'inline label', });
+lyr_temp_torgi_4.set('fieldLabels', {'Кадас': 'header label', 'Кадас_1': 'inline label', 'Площа': 'inline label', 'Стату': 'inline label', 'Тип с�': 'inline label', 'Цена �': 'inline label', 'Побед': 'inline label', });
 lyr_torgi_centroids_5.set('fieldLabels', {'fid': 'no label', 'Кадастровый номер': 'no label', 'Кадастрвоая стоимость': 'no label', 'Площадь': 'no label', 'Статус аукциона': 'no label', 'Тип сделки': 'no label', 'Цена сделки': 'no label', 'Победитель': 'no label', });
-lyr_temp_orgs_6.set('fieldLabels', {'Наименование': 'header label', 'Основные средства': 'inline label', 'Чистая прибыль': 'inline label', 'Рентабельность продаж': 'inline label', });
+lyr_temp_orgs_6.set('fieldLabels', {'Наиме': 'header label', 'Основ': 'inline label', 'Чиста': 'inline label', 'Рента': 'inline label', });
 lyr_temp_orgs_6.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
